@@ -9,7 +9,7 @@ import numpy as np
 
 @st.cache_resource
 def load_cancer_model():
-    return tf.keras.models.load_model("model.keras")
+    return tf.keras.models.load_model("modeles.keras")
 
 model = load_cancer_model()
 classes = {
@@ -93,7 +93,7 @@ with st.sidebar:
     st.markdown('<div class="sidebar-title">🧬 Predict-Cancer</div>', unsafe_allow_html=True)
     menu = st.radio("Navigation", ["🏠 Accueil", "🔬 Prédire"])
     st.markdown("---")
-    st.markdown("👨‍⚕️ *Projet Deep Learning - M2 IA*\n\n🧠 *Modèle CNN entraîné*", unsafe_allow_html=True)
+    st.markdown("👨‍⚕️ *Projet Deep Learning - M1 IA*\n\n🧠 *Modèle CNN entraîné*", unsafe_allow_html=True)
 
 # ----------------------------- PAGE ACCUEIL -------------------------------- #
 if menu == "🏠 Accueil":
@@ -143,7 +143,7 @@ else:
     uploaded = st.file_uploader("Chargez une image médicale", type=["jpg", "jpeg", "png"])
 
     if uploaded:
-        st.image(uploaded, caption="Image téléversée", use_container_width=True)
+        st.image(uploaded, caption="Image téléversée",width="500", use_container_width=True)
         if st.button("🧠 Lancer la prédiction"):
             img = keras_image.load_img(uploaded, target_size=(64, 64))
             arr = img_to_array(img)
