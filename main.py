@@ -170,7 +170,7 @@ else:
                     <p style="opacity:0.7">Confiance du modèle : <b>{confidence:.2f}%</b></p>
                 </div>
             """, unsafe_allow_html=True)
-=======
+
 import streamlit as st
 st.set_page_config(page_title="Predict-Cancer", page_icon="🧬", layout="centered")
 
