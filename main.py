@@ -9,7 +9,7 @@ import numpy as np
 
 @st.cache_resource
 def load_cancer_model():
-    model_path = "modeles.keras"
+    return tf.keras.models.load_model("modeles.keras")
 
 model = load_cancer_model()
 classes = {
