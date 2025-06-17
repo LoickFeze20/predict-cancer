@@ -7,6 +7,9 @@ from tensorflow.keras.utils import img_to_array
 from PIL import Image
 import numpy as np
 
+import os
+st.write("Fichiers dans le dossier courant :", os.listdir("."))
+
 @st.cache_resource
 def load_cancer_model():
     return tf.keras.models.load_model("modeles.keras")
